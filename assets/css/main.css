@@ -1918,6 +1918,32 @@ section,
   transform: scale(1.1);
 }
 
+.services .service-card {
+  cursor: pointer;
+}
+
+.services .service-pill {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--contrast-color);
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.services .service-card .card-action {
+  background-color: var(--accent-color);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+.services .service-card:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+  transform: translateY(-10px);
+}
+
 @media (max-width: 768px) {
   .services .service-card {
     padding: 150px 25px 25px;
@@ -1968,16 +1994,19 @@ section,
   margin-top: 1.5rem;
 }
 
-.testimonials .testimonial-item.highlight .testimonial-content {
+.testimonials .testimonial-item.highlight .testimonial-content,
+.testimonials .testimonial-content.highlight {
   background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
-.testimonials .testimonial-item.highlight .testimonial-content .quote-pattern {
+.testimonials .testimonial-item.highlight .testimonial-content .quote-pattern,
+.testimonials .testimonial-content.highlight .quote-pattern {
   background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
-.testimonials .testimonial-item.highlight .testimonial-content .quote-pattern i {
+.testimonials .testimonial-item.highlight .testimonial-content .quote-pattern i,
+.testimonials .testimonial-content.highlight .quote-pattern i {
   color: var(--accent-color);
 }
 
@@ -1992,6 +2021,42 @@ section,
 
 .testimonials .testimonial-content:hover {
   transform: translateY(-5px);
+}
+
+.testimonials .swiper {
+  padding: 1rem 0 2rem;
+}
+
+.testimonials .swiper-button-next,
+.testimonials .swiper-button-prev {
+  color: var(--accent-color);
+}
+
+.testimonials .swiper-pagination-bullet {
+  background: color-mix(in srgb, var(--accent-color), transparent 40%);
+  opacity: 1;
+}
+
+.testimonials .swiper-pagination-bullet-active {
+  background: var(--accent-color);
+}
+
+.testimonials .swiper-button-next,
+.testimonials .swiper-button-prev {
+  top: auto;
+  bottom: 1rem;
+}
+
+.testimonials .swiper-button-prev {
+  left: calc(50% - 70px);
+}
+
+.testimonials .swiper-button-next {
+  right: calc(50% - 70px);
+}
+
+.testimonials .swiper {
+  cursor: grab;
 }
 
 .testimonials .testimonial-content p {
